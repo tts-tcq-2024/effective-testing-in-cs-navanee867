@@ -4,7 +4,7 @@ using Xunit;
 namespace TshirtSpace {
     public static char TshirtSize(int cms)
     {
-        char sizeName = '\0';
+        char sizeName = '';
 
         if (cms < 38)
         {
