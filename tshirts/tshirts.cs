@@ -2,24 +2,33 @@ using System;
 using Xunit;
 
 namespace TshirtSpace {
-    class Tshirt {
-        static string Size(int cms) {
-            if(cms < 38) {
-                return "S";
-            } else if(cms > 38 && cms < 42) {
-                return "M";
-            } else {
-                return "L";
-            }
+    public static char TshirtSize(int cms)
+    {
+        char sizeName = '\0';
+
+        if (cms < 38)
+        {
+            sizeName = 'S';
         }
-        static void Main(string[] args) {
-            Assert.Equal(Size(37), 'S');
-Assert.Equal(Size(38), 'S');
-Assert.Equal(Size(40), 'M');
-Assert.Equal(Size(42), 'L');
-Assert.Equal(Size(44), 'L');
-Console.WriteLine("All is well (maybe!)");
-            Console.WriteLine( "All is well (maybe!)");
+        else if (cms > 38 && cms < 42)
+        {
+            sizeName = 'M';
         }
+        else if (cms > 42)
+        {
+            sizeName = 'L';
+        }
+
+        return sizeName;
+    }
+
+    public static void Main()
+    {
+        Assert.Equal(TshirtSize(37), 'S');
+        Assert.Equal(TshirtSize(38), 'S');
+        Assert.Equal(TshirtSize(40), 'M');
+        Assert.Equal(TshirtSize(42), 'L');
+        Assert.Equal(TshirtSize(44), 'L');
+        Console.WriteLine("All is well (maybe!)");
     }
 }
