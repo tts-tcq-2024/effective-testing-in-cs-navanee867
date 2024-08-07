@@ -1,5 +1,5 @@
 using System;
-using System.Diagnostics;
+using Xunit;
 
 namespace TshirtSpace {
     class Tshirt {
@@ -13,11 +13,12 @@ namespace TshirtSpace {
             }
         }
         static void Main(string[] args) {
-            Debug.Assert(Size(37) == "S");
-            Debug.Assert(Size(38) == 'S');
-            Debug.Assert(Size(40) == "M");
-            Debug.Assert(Size(42) == 'L');
-            Debug.Assert(Size(43) == "L");
+            Assert.Equal(Size(37), 'S');
+Assert.Equal(Size(38), 'S');
+Assert.Equal(Size(40), 'M');
+Assert.Equal(Size(42), 'L');
+Assert.Equal(Size(44), 'L');
+Console.WriteLine("All is well (maybe!)");
             Console.WriteLine( "All is well (maybe!)");
         }
     }
