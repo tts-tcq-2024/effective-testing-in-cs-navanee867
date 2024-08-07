@@ -1,5 +1,5 @@
 using System;
-using NUnit.Framework;
+using System.Diagnostics;
 
 namespace AlerterSpace {
     class Alerter {
@@ -32,7 +32,7 @@ namespace AlerterSpace {
         static void Main(string[] args) {
             alertInCelcius(400.5f);
             alertInCelcius(303.6f);
-            Assert.That(alertFailureCount, Is.EqualTo(2));
+            Debug.Assert(alertFailureCount == 2));
             Console.WriteLine("{0} alerts failed.", alertFailureCount);
             Console.WriteLine("All is well (maybe!)\n");
         }
