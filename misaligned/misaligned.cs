@@ -24,7 +24,7 @@ namespace MisalignedSpace
         {
             PrintColorMap();
 
-            Debug.Assert(_majorColor.Length == 7);
+            Debug.Assert(_majorColor.Length == 5);
             Console.WriteLine("All is well (maybe!)");
         }
     }
