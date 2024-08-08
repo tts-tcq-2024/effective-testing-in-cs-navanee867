@@ -1,4 +1,3 @@
-using System;
 using System.Diagnostics;
 
 namespace TshirtSpace
@@ -15,9 +14,13 @@ namespace TshirtSpace
             {
                 return "M";
             }
-            else  if (cms > 42)
+            else if (cms > 42)
             {
                 return "L";
+            }
+            else
+            {
+                return string.Empty;
             }
         }
         static void Main(string[] args)
